@@ -6,18 +6,21 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 
 
 @Component({
   standalone: true,
-  imports: [MatCardModule, ReactiveFormsModule, MatFormFieldModule, CommonModule],
+  imports: [MatCardModule, ReactiveFormsModule, MatFormFieldModule, CommonModule, MatIconModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
 loginForm: FormGroup;
+hidePassword!: false;
 
 constructor(
   private fb: FormBuilder,
@@ -54,5 +57,9 @@ get passwordError(){
   const control = this.loginForm.get('password');
   return control?.hasError('required') ? 'La contraseña  es obligatoria':
           control?.hasError('minlength') ? 'Mínimo 6 caracteres': '';
+}
+
+togglePasswordVisibility():void {
+this.hidePassword = this.hidePassword;
 }
 }

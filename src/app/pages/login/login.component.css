@@ -3,15 +3,82 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #f5f5f5;
+  background: #e07d7d;
 }
 
 .login-card {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .full-width {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
+
+mat-form-field {
+  display: block;
+}
+
+.icon-left {
+  margin-right: 8px;
+}
+
+mat-icon {
+  vertical-align: middle;
+}
+form {
+  background: #ffffff; /* Fondo blanco para destacar */
+  padding: 24px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espacio entre elementos */
+}
+mat-form-field {
+  width: 100%;
+  background: transparent; /* Eliminamos el fondo gris para que el label sea visible */
+}
+
+mat-label {
+  font-size: 14px; /* Tamaño de fuente más legible */
+  font-weight: 500; /* Un poco más grueso */
+  color: rgba(0, 0, 0, 0.7); /* Color más oscuro para mejor contraste */
+}
+
+.mat-mdc-text-field-wrapper {
+  border-radius: 8px !important; /* Bordes redondeados */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Borde sutil */
+  padding: 5px;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background: transparent !important; /* Evita fondo gris al enfocar */
+}
+
+.mat-mdc-text-field-wrapper:hover {
+  border-color: #1976d2; /* Azul cuando pasas el mouse */
+}
+
+input {
+  font-size: 16px;
+  padding: 10px;
+  color: #333; /* Color oscuro para mejor lectura */
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+

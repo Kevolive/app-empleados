@@ -1,0 +1,66 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+mat-sidenav {
+  width: 250px; /* Ajusta el tamaño del menú */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content-body {
+  text-align: center;
+  padding: 20px;
+}
+
+mat-sidenav {
+  width: 250px !important; /* 🔹 Se asegura que el sidenav tenga un ancho */
+}
+.flex-spacer {
+  flex-grow: 1; /* 🔥 Empuja los elementos hacia la derecha */
+}
+
+.home-button {
+  background-color: rgb(238, 78, 78);
+}
+
+.home-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+mat-card {
+  cursor: pointer;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+mat-card:hover {
+  transform: scale(1.05);
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre tarjetas */
+  justify-content: center; /* Centra las tarjetas */
+}
+
+.blog-card {
+  width: 350px; /* Tamaño de cada tarjeta */
+  flex: 1 1 300px; /* Se ajusta automáticamente en pantallas pequeñas */
+}
+

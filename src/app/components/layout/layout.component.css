@@ -1,0 +1,41 @@
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+}
+
+.welcome-container {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: linear-gradient(135deg, #1976D2, #64B5F6); /* Fondo degradado azul */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.welcome-title span {
+  color: #FFEB3B; /* Amarillo Material Design */
+}
+
+.welcome-subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+}

@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="spacer"></span>
+  <span class="toolbar-title">App Empleados</span>
+
+  <span class="flex-spacer"></span>
+
+  <button mat-icon-button (click)="logout()" aria-label="Cerrar sesión">
+    <mat-icon>logout</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+<!-- Sidenav -->
+<mat-sidenav-container class="sidenav-container" color="warn">
+  <mat-sidenav #sidenav mode="over" [opened]="false">
+
+    <button mat-button (click)="navigateHome()" class="home-button" >
+      <mat-icon>menu</mat-icon> Menú
+
+    </button>
+
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let item of sidebarItems" (click)="navigate(item)">
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <span>{{ item.label }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+
+  <mat-sidenav-content>
+    <div class="content">
+      <div class="welcome-container">
+        <h1 class="welcome-title">👋 Bienvenido a <span>App Empleados</span></h1>
+        <p class="welcome-subtitle">
+          Gestiona y administra a tus empleados de manera eficiente y organizada.
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+<app-footer></app-footer>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

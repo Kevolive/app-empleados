@@ -1,0 +1,10 @@
+.footer {
+  position: relative; /* Cambia de fixed a relative */
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.flex-spacer {
+  flex: 1;
+}

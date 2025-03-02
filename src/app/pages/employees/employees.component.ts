@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component,  } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+
 
 @Component({
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './employees.component.html',
   styles: ``
 })

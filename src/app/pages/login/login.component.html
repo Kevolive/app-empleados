@@ -1,14 +1,15 @@
+
 <div class="login-container">
 
   <mat-card class="login-card">
-    <mat-card-title>Inicio de sesión</mat-card-title>
+    <mat-card-title class="title">Inicio de sesión</mat-card-title>
     <mat-card-content>
       <form [formGroup]="loginForm" (ngSubmit)="login()">
 
         <!-- Input de usuario -->
         <mat-form-field appearance="outline" class="full-width">
           <mat-label> Usuario</mat-label>
-          <input matInput type="text" formControlName="username">
+          <input matInput type="text" formControlName="username" placeholder="Usuario" autocomplete="off">
           <mat-error *ngIf="loginForm.get('username')?.invalid">
         {{usernameError}}
           </mat-error>
@@ -18,7 +19,13 @@
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label> Contraseña</mat-label>
-          <input matInput type="password" formControlName="password">
+          <input matInput [type]="hidePassword ? 'password': 'text'" placeholder="Contraseña" formControlName="password">
+
+
+          <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
+            <mat-icon> {{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
           <mat-error *ngIf="loginForm.get('password')?.invalid">
         {{passwordError}}
           </mat-error>
@@ -26,7 +33,13 @@
 
         <!-- Botón submit -->
 
-        <button mat-raised-button color="primary" class="full-width" type="submit" [disabled]="loginForm.invalid"></button>
+        <button mat-raised-button color="primary" class="full-width" type="submit" [disabled]="loginForm.invalid" routerLink="/home" routerLinkActive="router-link-active" >
+          <mat-icon class="icon-left"> save</mat-icon> Iniciar Sesión
+        </button>
+
+        <div class="flex justify-content-end mt-5">
+          <a routerLink="/auth/new-account">¿Ya tienes cuenta?</a>
+            </div>
 
       </form>
     </mat-card-content>
